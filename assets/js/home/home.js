@@ -13,7 +13,6 @@ async function getProductsData() {
     if (this.readyState == 4 && this.status == 200) {
       const data = JSON.parse(Http.responseText);
       const products = data;
-      console.log(products);
 
       if (window.innerWidth <= 768) {
         displayProductsByCategory(products, starWarsSection, "star wars", 4);

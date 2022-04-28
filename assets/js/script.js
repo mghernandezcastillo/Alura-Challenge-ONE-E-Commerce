@@ -1,6 +1,7 @@
 // redirect to home page
 function redirectToHome() {
-  window.location.replace("screens/home.html");
+  let root = window.location.origin;
+  window.location.replace(`${root}/screens/home.html`);
 }
 
 redirectToHome();
