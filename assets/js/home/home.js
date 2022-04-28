@@ -6,7 +6,7 @@ const diversosSection = document.querySelector("#diversos");
 
 async function getProductsData() {
   const Http = new XMLHttpRequest();
-  const url = "productsData.json";
+  const url = "../productsData.json";
   Http.open("GET", url);
   Http.send();
   Http.onreadystatechange = function () {
@@ -38,5 +38,5 @@ getProductsData();
 const banner__button = document.querySelector(".banner__button");
 
 banner__button.onclick = function () {
-  window.location.href = "screens/allProducts.html?category=consolas";
+  window.location.href = "allProducts.html?category=consolas";
 };
