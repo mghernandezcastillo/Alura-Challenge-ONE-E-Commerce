@@ -1,0 +1,16 @@
+.footer__logo {
+  width: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 31px;
+  }
+  .footer__logo img {
+    width: 176px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,105 @@
+:root {
+  /* Homepage colors */
+  --color-primary: #2a7ae4;
+  --color-secondary: #464646;
+  --page-header-bgColor: #ffffff;
+  --page-header-txt1Color: #2a7ae4;
+  --page-header-txt2Color: #464646;
+  --page-header-headingColor: #7889a4;
+  --page-header-search-bgColor: #f5f5f5;
+  --page-header-search-placeHolderColor: #a2a2a2;
+  --page-header-menu-linkActiveColor: #2c3e50;
+  --page-header-menu-linkColor: #000000;
+  --page-header-button-borderColor: #2a7ae4;
+  --page-header-button-txtColor: #2a7ae4;
+  --page-banner-button-bgColor: #2a7ae4;
+  --page-banner-button-txtColor: #fff;
+  --page-products-titleColor: #464646;
+  --page-products-priceColor: #000000;
+  --page-products-linkColor: #2a9de4;
+  --page-footer-bgColor: #eaf2fd;
+  --page-footer-linkColor: #464646;
+  --page-footer-button-bgColor: #2a7ae4;
+  --page-footer-button-txtColor: #ffffff;
+  --page-product-bgColor: #e5e5e5;
+  --page-product-titleColor: #464646;
+  --page-product-priceColor: #000000;
+  --page-product-descriptionColor: #464646;
+  --page-product-button-bgColor: #2a7ae4;
+  --page-product-button-textColor: #ffffff;
+  --page-login-bgcolor: #e5e5e5;
+  --page-logIn-titleColor: #464646;
+  --page-logIn-placeholderColor: #a2a2a2;
+  --page-login-button-bgColor: #2a7ae4;
+  --page-login-button-txtColor: #ffffff;
+  --page-createProduct-bgColor: #e5e5e5;
+  --page-createProduct-dropBox-bgColor: #ffffff33;
+  --page-createProduct-dropBox-textColor: #6b6b6b;
+  --page-createProduct-dropBox-borderColor: #c8c8c8;
+  --page-createProduct-dropBox-iconColor: #c8c8c8;
+  --page-createProduct-buttonFile-borderColor: #2a7ae4;
+  --page-createProduct-buttonFile-textColor: #2a7ae4;
+  --page-createProduct-input-bgColor: #ffffff;
+  --page-createProduct-input-textColor: #464646;
+  --page-createProduct-input-placeHolderColor: #a2a2a2;
+  --page-createProduct-button-bgColor: #2a7ae4;
+  --page-createProduct-button-txtColor: #ffffff;
+  --white: #fff;
+  --black: #333;
+  --blue: #00b9eb;
+  --red: #ec1848;
+  --transparent: rgba(0, 0, 0, 0);
+  --border-radius: 20px;
+  --box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.075);
+
+  /* Product colors */
+  --product-bgColor: #e5e5e5;
+  --product-titleColor: #464646;
+  --product-priceColor: #464646;
+  --product-descriptionColor: #464646;
+  --warning-color: #df2525;
+}
+
+.item--invalid input {
+  border: 1px solid var(--warning-color) !important;
+}
+.item--invalid textarea {
+  border: 1px solid var(--warning-color) !important;
+}
+
+.input-message-error {
+  display: none;
+}
+
+.item--invalid .input-message-error {
+  display: block;
+  color: var(--warning-color);
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+header,
+section,
+footer {
+  padding: 0 10%;
+}
+
+/* padding in all sections */
+
+/* vista movil*/
+@media only screen and (max-width: 768px) {
+  header,
+  section,
+  footer {
+    padding: 0 16px;
+  }
+}
+
+/* vista tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header,
+  section,
+  footer {
+    padding: 0 32px;
+  }
+}

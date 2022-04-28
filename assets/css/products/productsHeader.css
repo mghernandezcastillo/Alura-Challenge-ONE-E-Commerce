@@ -1,0 +1,19 @@
+.products__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.products__title {
+  color: var(--page-products-titleColor);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.products__link {
+  color: var(--page-products-linkColor);
+  font-size: 1rem;
+  font-weight: 700;
+}

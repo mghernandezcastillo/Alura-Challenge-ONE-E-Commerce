@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerButton.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerSearch.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerMenu.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerLogo.css" />
+    <link rel="stylesheet" href="../assets/css/header/header.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/css/createProduct/createProduct.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/createProduct/createProductUpload.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/createProduct/createProductForm.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/css/createProduct/createProductUpload.css"
+    />
+    <link rel="stylesheet" href="../assets/css/footer/footer.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerLogo.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerList.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerForm.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerContact.css" />
+    <link rel="stylesheet" href="../assets/css/copyright/copyright.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Agregar Producto</title>
+  </head>
+  <body>
+    <!-- SECCION HEADER -->
+    <header class="header"></header>
+    <main class="create-main">
+      <!-- SECCION CREATE -->
+      <section class="create-product" id="create-product">
+        <div class="create-product__title">
+          <h1>Agregar nuevo producto</h1>
+        </div>
+
+        <!-- Upload  -->
+        <form
+          action=""
+          class="create__form"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <div class="create__upload">
+            <!-- upload image -->
+            <span class="dragBox">
+              <i class="fas fa-image image-icon"></i>
+              <p>Arrastre para agregar una imagen para el producto</p>
+              <input type="file" id="uploadFile" required />
+            </span>
+            <strong>o</strong>
+            <label for="uploadFile" class="upload-btn">
+              Busque en su ordenador</label
+            >
+          </div>
+          <h6>Vista previa</h6>
+          <div id="preview" class="preview"></div>
+          <!-- NOMBRE DEL PRODUCTO-->
+          <div class="create-product__item input">
+            <label for="name">Nombre del producto</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="create-product__input"
+              placeholder="Nombre"
+              data-type="name"
+              required
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <!-- PRECIO DEL PRODUCTO-->
+          <div class="create-product__item input">
+            <label for="price">Precio del producto</label>
+            <input
+              type="text"
+              name="price"
+              id="price"
+              class="create-product__input"
+              placeholder="Precio del producto"
+              data-type="price"
+              pattern="[0-9]*"
+              required
+            />
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <!-- DESCRIPCION DEL PRODUCTO-->
+          <div class="create-product__item input">
+            <label for="description">Descripción del producto</label>
+            <textarea
+              name="description"
+              id="description"
+              class="create-product__input"
+              placeholder="Descripción del producto"
+              data-type="description"
+              required
+            ></textarea>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
+          <div class="create__upload-button">
+            <button type="submit" name="submit">Agregar producto</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer" id="footer"></footer>
+    <section class="copyright"></section>
+
+    <script src="../assets/js/header/header.js?60"></script>
+    <script src="../assets/js/mobileMenu/mobileMenu.js?60"></script>
+    <script src="../assets/js/header/headerSearch.js?60"></script>
+    <script src="../assets/js/product/uploadProduct.js?60"></script>
+    <script src="../assets/js/footer/footer.js?60"></script>
+    <script src="../assets/js/copyright/copyright.js?60"></script>
+    <script src="../assets/js/app.js?60" type="module"></script>
+  </body>
+</html>

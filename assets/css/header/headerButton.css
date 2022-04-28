@@ -1,0 +1,21 @@
+.header__button {
+  margin-left: 19px;
+  margin-right: 19px;
+}
+
+.header__button input {
+  width: 182px;
+  height: 51px;
+  font-size: 1.5rem;
+  background: none;
+  color: var(--page-header-button-txtColor);
+  border: 1px solid var(--page-header-button-borderColor);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .header__button input {
+    width: 133px;
+    height: 40px;
+  }
+}

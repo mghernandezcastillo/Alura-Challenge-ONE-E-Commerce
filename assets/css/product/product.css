@@ -1,0 +1,128 @@
+.product-main {
+  background-color: var(--page-product-bgColor);
+}
+
+.product {
+  padding-top: 64px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 64px;
+}
+
+.product__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 503px;
+}
+
+.product__image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.product__data-container {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  width: calc(50% - 16px);
+  height: 503px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.product__title {
+  font-size: 52px;
+  font-weight: 500;
+  color: var(--page-product-titleColor);
+}
+
+.product__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--page-product-priceColor);
+}
+
+.product__description {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--page-product-descriptionColor);
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .product {
+    padding-top: 0px;
+    padding-bottom: 32px;
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .product__image-container {
+    width: 100%;
+    height: 157px;
+  }
+
+  .product__data-container {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product__title {
+    font-size: 22px;
+  }
+
+  .product__price {
+    font-size: 16px;
+  }
+
+  .product__description {
+    font-size: 14px;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product {
+    padding-top: 32px;
+  }
+
+  .product__image-container {
+    width: 254px;
+    height: 157px;
+  }
+
+  .product__data-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    width: calc(100% - 16px - 254px);
+    height: 157px;
+  }
+
+  .product__title {
+    font-size: 22px;
+  }
+
+  .product__price {
+    font-size: 16px;
+  }
+
+  .product__description {
+    font-size: 14px;
+  }
+}

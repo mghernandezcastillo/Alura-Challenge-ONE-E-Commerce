@@ -1,0 +1,80 @@
+.create__upload {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+strong {
+  padding: 0 10px;
+}
+
+.dragBox {
+  width: 301px;
+  height: 152px;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: var(--page-createProduct-dropBox-bgColor);
+  color: var(--page-createProduct-dropBox-textColor);
+  border: 2px dashed var(--page-createProduct-dropBox-borderColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.3s;
+  padding: 32px;
+}
+
+.image-icon {
+  font-size: 32px;
+  color: var(--page-createProduct-dropBox-iconColor);
+}
+
+input[type="file"] {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+.upload-btn {
+  width: 229px;
+  height: 51px;
+  border: 1px solid var(--page-createProduct-buttonFile-borderColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+  color: var(--page-createProduct-buttonFile-textColor);
+  font-size: 16px;
+}
+
+.draging {
+  transform: scale(1.1);
+}
+#preview {
+  text-align: center;
+}
+.preview img {
+  width: 100px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  strong {
+    display: none;
+  }
+  .upload-btn {
+    display: none;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+}

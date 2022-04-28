@@ -1,0 +1,130 @@
+.header__menu {
+}
+
+.header__link.active,
+.header__link:hover {
+  background: none;
+  text-decoration: underline;
+  transition: 0.5s;
+  color: var(--page-header-menu-linkActiveColor);
+}
+
+.header__link {
+  font-size: 20px;
+  color: var(--page-header-menu-linkColor);
+}
+
+.checkbtn {
+  top: 80px;
+  right: 0;
+  font-size: 30px;
+  color: #000000;
+  float: right;
+  line-height: 60px;
+  margin-right: 10px;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  z-index: 20;
+}
+
+.header__item {
+  display: inline-block;
+  margin: 0px 5px;
+}
+
+.header__link {
+  font-size: 17px;
+  color: var(--page-header-menu-linkColor);
+}
+.header__link:hover,
+.header__link.active {
+  color: var(--page-header-menu-linkActiveColor);
+}
+
+#check:checked ~ .header__menu {
+  left: 0;
+}
+
+.header__menuicon {
+  border: 1px solid rgb(0, 0, 0);
+  background: rgba(164, 194, 235, 0.329);
+  border-radius: 15%;
+  padding: 5px;
+}
+
+#check {
+  display: none;
+}
+
+/* Para mobiles */
+@media only screen and (max-width: 768px) {
+  .checkbtn {
+    display: block;
+  }
+  .header__menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #2c3e50eb;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    overflow-y: scroll;
+    z-index: 10;
+  }
+  .header__item {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .header__link {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .header__link:hover,
+  .header__link.active {
+    color: lightblue;
+  }
+  #check:checked ~ .header__menu {
+    left: 0;
+  }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .checkbtn {
+    display: block;
+  }
+  .header__menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #2c3e50eb;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    overflow-y: scroll;
+    z-index: 10;
+  }
+  .header__item {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  .header__link {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+  }
+  .header__link:hover,
+  .header__link.active {
+    color: lightblue;
+  }
+  #check:checked ~ .header__menu {
+    left: 0;
+  }
+}

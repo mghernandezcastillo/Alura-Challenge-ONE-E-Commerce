@@ -1,0 +1,23 @@
+.products__category {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .products__category {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products__category {
+    justify-content: none;
+  }
+}

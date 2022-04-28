@@ -1,0 +1,24 @@
+.footer__list {
+  height: auto;
+  background-color: var(--page-footer-bgColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.footer__link {
+  color: var(--page-footer-linkColor);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__list {
+    text-align: center;
+    margin-bottom: 32px;
+    gap: 16px;
+  }
+}

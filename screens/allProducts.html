@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerButton.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerSearch.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerMenu.css" />
+    <link rel="stylesheet" href="../assets/css/header/headerLogo.css" />
+    <link rel="stylesheet" href="../assets/css/header/header.css" />
+    <link rel="stylesheet" href="../assets/css/product/allProducts.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footer.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerLogo.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerMenu.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerList.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerForm.css" />
+    <link rel="stylesheet" href="../assets/css/footer/footerContact.css" />
+    <link rel="stylesheet" href="../assets/css/copyright/copyright.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Todos los Productos</title>
+  </head>
+  <body>
+    <!-- SECCION HEADER -->
+    <header class="header"></header>
+    <!-- All PRODUCTS -->
+    <main class="all-products-main">
+      <!-- SECCION ALL PRODUCTS HEADER-->
+      <section class="all-products__header">
+        <div class="all-products__title">
+          <h1>Todos los productos</h1>
+        </div>
+        <div class="all-products__button">
+          <li>
+            <a href="createProduct.html" class="add-product__btn">
+              Agregar producto</a
+            >
+          </li>
+        </div>
+      </section>
+      <section class="all-products__filter">
+        <div class="all-products__subtitle">
+          <h4></h4>
+        </div>
+        <div class="all-products__remove-filter">
+          <a href="allProducts.html?category=all">
+            <i class="fas fa-times"></i>
+            <span>Quitar filtros</span>
+          </a>
+        </div>
+      </section>
+      <!-- SECCION ALL PRODUCTS CONTENT-->
+      <section class="all-products" id="all-products"></section>
+    </main>
+    <footer class="footer" id="footer"></footer>
+    <section class="copyright"></section>
+
+    <script src="../assets/js/service.js?60"></script>
+    <script src="../assets/js/common/common.js?60"></script>
+    <script src="../assets/js/product/allProducts.js?60"></script>
+    <script src="../assets/js/header/header.js?60"></script>
+    <script src="../assets/js/mobileMenu/mobileMenu.js?60"></script>
+    <script src="../assets/js/header/headerSearch.js?60"></script>
+    <script src="../assets/js/footer/footer.js?60"></script>
+    <script src="../assets/js/copyright/copyright.js?60"></script>
+  </body>
+</html>

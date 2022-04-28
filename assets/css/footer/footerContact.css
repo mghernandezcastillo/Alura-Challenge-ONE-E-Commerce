@@ -1,0 +1,9 @@
+.footer__contact {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer__contact {
+    width: 100%;
+  }
+}
