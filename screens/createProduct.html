@@ -52,18 +52,19 @@
         </div>
 
         <!-- Upload  -->
-        <form
-          action=""
-          class="create__form"
-          method="post"
-          enctype="multipart/form-data"
-        >
+        <form class="create__form" data-form>
           <div class="create__upload">
             <!-- upload image -->
             <span class="dragBox">
               <i class="fas fa-image image-icon"></i>
               <p>Arrastre para agregar una imagen para el producto</p>
-              <input type="file" id="uploadFile" required />
+              <input
+                type="file"
+                id="uploadFile"
+                name="image"
+                required
+                data-type="uploadFile"
+              />
             </span>
             <strong>o</strong>
             <label for="uploadFile" class="upload-btn">
@@ -72,12 +73,13 @@
           </div>
           <h6>Vista previa</h6>
           <div id="preview" class="preview"></div>
+          <img src="" id="previewImg" alt="" style="display: none" />
           <!-- NOMBRE DEL PRODUCTO-->
           <div class="create-product__item input">
             <label for="name">Nombre del producto</label>
             <input
               type="text"
-              name="name"
+              name="title"
               id="name"
               class="create-product__input"
               placeholder="Nombre"
@@ -114,8 +116,25 @@
             ></textarea>
             <span class="input-message-error">Este campo no es valido</span>
           </div>
+          <!-- CATEGORIA DEL PRODUCTO-->
+          <div class="create-product__item input">
+            <label for="category">Categoría del producto</label>
+            <select
+              name="category"
+              id="category"
+              class="create-product__input"
+              data-type="category"
+              required
+            >
+              <option value="">Seleccione una categoría</option>
+              <option value="star wars">Star Wars</option>
+              <option value="consolas">Consolas</option>
+              <option value="diversos">Diversos</option>
+            </select>
+            <span class="input-message-error">Este campo no es valido</span>
+          </div>
           <div class="create__upload-button">
-            <button type="submit" name="submit">Agregar producto</button>
+            <button type="submit">Agregar producto</button>
           </div>
         </form>
       </section>
@@ -123,12 +142,22 @@
     <footer class="footer" id="footer"></footer>
     <section class="copyright"></section>
 
-    <script src="../assets/js/header/header.js?68"></script>
-    <script src="../assets/js/mobileMenu/mobileMenu.js?68"></script>
-    <script src="../assets/js/header/headerSearch.js?68"></script>
-    <script src="../assets/js/product/uploadProduct.js?68"></script>
-    <script src="../assets/js/footer/footer.js?68"></script>
-    <script src="../assets/js/copyright/copyright.js?68"></script>
-    <script src="../assets/js/app.js?68" type="module"></script>
+    <script src="../assets/js/header/header.js?72"></script>
+    <script src="../assets/js/mobileMenu/mobileMenu.js?72"></script>
+    <script src="../assets/js/header/headerSearch.js?72"></script>
+    <script src="../assets/js/uploadInput.js?72"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="../controllers/createProduct-controller.js"
+      type="module"
+    ></script>
+    <script src="../assets/js/footer/footer.js?72"></script>
+    <script src="../assets/js/copyright/copyright.js?72"></script>
+    <script src="../assets/js/app.js?72" type="module"></script>
   </body>
 </html>

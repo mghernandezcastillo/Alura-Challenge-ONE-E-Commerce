@@ -12,9 +12,13 @@ function createListProductsItem(product, section) {
 
   // imagen
   let productImage = document.createElement("article");
-  let productImg = document.createElement("div");
+  let productImg = document.createElement("img");
   productImg.classList.add("product__image");
-  productImg.style.backgroundImage = `url(../${product.image})`;
+  if (product.image.includes("data:image")) {
+    productImg.src = `${product.image}`;
+  } else {
+    productImg.src = `../${product.image}`;
+  }
 
   // append imagen
   productImage.appendChild(productImg);
@@ -75,9 +79,14 @@ function createProductDataItem(product, section) {
   productImageContainer.classList.add("product__image-container");
 
   // create product image
-  let productImage = document.createElement("div");
+  let productImage = document.createElement("img");
+
   productImage.classList.add("product__image");
-  productImage.style.backgroundImage = `url(../${product.image})`;
+  if (product.image.includes("data:image")) {
+    productImage.src = `${product.image}`;
+  } else {
+    productImage.src = `../${product.image}`;
+  }
 
   // append product image
   productImageContainer.appendChild(productImage);
@@ -111,21 +120,10 @@ function createProductDataItem(product, section) {
   section.appendChild(productDataContainer);
 }
 
-function displayAllProducts(products, section, limit = products.length) {
+function displayProducts(products, section, limit = products.length) {
   for (let i = 0; i < limit; i++) {
     const product = products[i];
     createListProductsItem(product, section);
-  }
-}
-
-function displayProductsByCategory(products, section, category, limit) {
-  products = products.filter((product) => product.category === category);
-
-  for (let i = 0; i < limit; i++) {
-    const product = products[i];
-    if (product.category === category) {
-      createListProductsItem(product, section);
-    }
   }
 }
 

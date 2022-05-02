@@ -1,17 +1,20 @@
 export function validate(input) {
-  console.log("validate");
   const inputType = input.dataset.type;
   /*   if (validators[inputType](input)) {
     validators[inputType](input);
   } */
 
   if (input.validity.valid) {
-    input.parentElement.classList.remove("item--invalid");
-    input.parentElement.querySelector(".input-message-error").innerHTML = "";
+    if (inputType != "uploadFile") {
+      input.parentElement.classList.remove("item--invalid");
+      input.parentElement.querySelector(".input-message-error").innerHTML = "";
+    }
   } else {
     input.parentElement.classList.add("item--invalid");
-    input.parentElement.querySelector(".input-message-error").innerHTML =
-      showErrorMessage(inputType, input);
+    if (inputType != "uploadFile") {
+      input.parentElement.querySelector(".input-message-error").innerHTML =
+        showErrorMessage(inputType, input);
+    }
   }
 }
 

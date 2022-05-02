@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/HarlandLohora/1836-CRUD_JS_Async/issues"
   },
-  "homepage": "https://github.com/HarlandLohora/1836-CRUD_JS_Async#readme"
+  "homepage": "https://github.com/HarlandLohora/1836-CRUD_JS_Async#readme",
+  "dependencies": {
+    "file-system": "^1.2.2",
+    "json-server": "^0.17.0"
+  }
 }
