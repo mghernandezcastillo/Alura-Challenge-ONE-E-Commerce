@@ -73,7 +73,10 @@ function createHeader(section) {
   let loginContainer = document.createElement("div");
   loginContainer.classList.add("header__button");
 
-  if (localStorage.getItem("isLogged") === "false") {
+  if (
+    localStorage.getItem("isLogged") === "false" ||
+    localStorage.getItem("isLogged") === null
+  ) {
     // create login input
     let loginButton = document.createElement("input");
     loginButton.setAttribute("type", "button");
@@ -88,20 +91,18 @@ function createHeader(section) {
     loginContainer.appendChild(loginButton);
   } else {
     // create logout input
-    if (localStorage.getItem("isLogged") === "true") {
-      let logoutButton = document.createElement("input");
-      logoutButton.setAttribute("type", "button");
-      logoutButton.setAttribute("value", "Logout");
-      logoutButton.setAttribute("id", "logout_button");
-      logoutButton.classList.add("header__button--login");
-      logoutButton.onclick = function () {
-        localStorage.setItem("isLogged", false);
-        window.location.href = "../screens/home.html";
-      };
+    let logoutButton = document.createElement("input");
+    logoutButton.setAttribute("type", "button");
+    logoutButton.setAttribute("value", "Logout");
+    logoutButton.setAttribute("id", "logout_button");
+    logoutButton.classList.add("header__button--login");
+    logoutButton.onclick = function () {
+      localStorage.setItem("isLogged", false);
+      window.location.href = "../screens/home.html";
+    };
 
-      // append logout button to login container
-      loginContainer.appendChild(logoutButton);
-    }
+    // append logout button to login container
+    loginContainer.appendChild(logoutButton);
   }
 
   // create search container for mobile
