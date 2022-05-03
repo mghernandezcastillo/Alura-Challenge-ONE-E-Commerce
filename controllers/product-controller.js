@@ -16,6 +16,6 @@ async function getProductsData() {
   }
 }
 
-localStorage.clear();
+localStorage.removeItem("productId");
 
 getProductsData();

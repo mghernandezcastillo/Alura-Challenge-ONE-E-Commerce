@@ -51,6 +51,7 @@
   line-height: 21px;
   background-color: var(--page-login-button-bgColor);
   color: var(--page-login-button-txtColor);
+  cursor: pointer;
 }
 
 /* mobile */

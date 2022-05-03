@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.all-products__button--hide {
+  display: none;
+}
+
 .all-products__button li {
   width: 163px;
   height: 51px;
@@ -63,6 +67,42 @@
 
 .hide-filter {
   display: none;
+}
+
+.product__icons-container {
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.product__icons-container--hide {
+  display: none;
+}
+
+.product__edit-icon {
+  position: relative;
+  color: lightgreen;
+  top: -2px;
+  left: -2px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.product__text-icon {
+  margin-right: 10px;
+}
+
+.product__delete-icon {
+  position: relative;
+  color: lightcoral;
+  top: -2px;
+  left: -2px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
 
 .all-products .product__image {

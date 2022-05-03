@@ -15,13 +15,9 @@ form.addEventListener("submit", (event) => {
     }
   });
 
-  console.log(product);
-
   productServices
     .createProduct(product)
-    .then((response) => {
-      console.log(response);
-    })
+    .then((response) => {})
     .catch((error) => {
       console.log(error);
     });
@@ -30,7 +26,6 @@ form.addEventListener("submit", (event) => {
 function previewFile() {
   const preview = document.querySelector("#previewImg");
   const file = document.querySelector("#uploadFile").files[0];
-  console.log(file);
   const reader = new FileReader();
 
   reader.addEventListener(

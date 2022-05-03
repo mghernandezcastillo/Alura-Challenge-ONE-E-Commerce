@@ -29,6 +29,6 @@ async function getSimilarProductsData() {
   }
 }
 
-localStorage.clear();
+localStorage.removeItem("productId");
 
 getSimilarProductsData();

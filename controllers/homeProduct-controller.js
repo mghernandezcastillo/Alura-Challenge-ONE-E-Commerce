@@ -30,18 +30,19 @@ async function displayProductsData() {
 
   // for desktop devices
   if (window.innerWidth > 768) {
-    displayProducts(productsSectionStarWars, starWarsSection, 6);
-    displayProducts(productsSectionConsolas, consolasSection, 6);
-    displayProducts(productsSectionDiversos, diversosSection, 6);
+    displayProducts(productsSectionStarWars, starWarsSection, 5);
+    displayProducts(productsSectionConsolas, consolasSection, 5);
+    displayProducts(productsSectionDiversos, diversosSection, 5);
   }
 }
 
-localStorage.clear();
+localStorage.removeItem("productId");
 
 displayProductsData();
 
 const banner__button = document.querySelector(".banner__button");
 
 banner__button.onclick = function () {
-  window.location.href = "allProducts.html?category=consolas";
+  window.location.href =
+    "allProducts.html?category=consolas&filteredBy=category";
 };

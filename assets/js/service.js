@@ -9,7 +9,6 @@ function createListProductsItem(product, section) {
   const productImageLink = document.createElement("a");
   productImageLink.classList.add("product__image-link");
   productImageLink.href = `../screens/product.html?id=${product.id}`;
-
   // imagen
   let productImage = document.createElement("article");
   let productImg = document.createElement("img");
@@ -22,6 +21,45 @@ function createListProductsItem(product, section) {
 
   // append imagen
   productImage.appendChild(productImg);
+
+  // icons container
+  let productIconsContainer = document.createElement("div");
+  productIconsContainer.classList.add("product__icons-container");
+  productIconsContainer.classList.add("product__icons-container--hide");
+
+  // delete icon
+  let deleteIcon = document.createElement("i");
+  deleteIcon.classList.add("fas", "fa-times");
+  deleteIcon.classList.add("product__delete-icon");
+  //text icon
+  let textIcon = document.createElement("p");
+  textIcon.classList.add("product__text-icon");
+  textIcon.innerText = `${"Eliminar"}`;
+
+  // edit icon
+  let editIcon = document.createElement("i");
+  editIcon.classList.add("fas", "fa-pen");
+  editIcon.classList.add("product__edit-icon");
+
+  // text icon
+  let textIcon2 = document.createElement("p");
+  textIcon2.classList.add("product__text-icon");
+  textIcon2.innerText = `${"Editar"}`;
+
+  // product id
+  let productId = document.createElement("p");
+  productId.classList.add("product__id");
+  productId.innerText = `${product.id}`;
+  productId.style.display = "none";
+
+  if (section.id === "all-products") {
+    // append icons
+    productIconsContainer.appendChild(editIcon);
+    productIconsContainer.appendChild(textIcon2);
+    productIconsContainer.appendChild(deleteIcon);
+    productIconsContainer.appendChild(textIcon);
+    productIconsContainer.appendChild(productId);
+  }
 
   // append image link
   productImageLink.appendChild(productImage);
@@ -65,6 +103,7 @@ function createListProductsItem(product, section) {
   productItem.appendChild(productTitle);
   productItem.appendChild(productPrice);
   productItem.appendChild(productLink);
+  productItem.appendChild(productIconsContainer);
   if (section.classList.contains("product")) {
     productItem.appendChild(productDescription);
   }

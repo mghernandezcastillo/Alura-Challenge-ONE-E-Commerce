@@ -32,6 +32,14 @@ function createHeader(section) {
   // create search form
   let searchForm = document.createElement("form");
   searchForm.classList.add("header__form");
+  searchForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    window.location.href =
+      "allProducts.html?search=" +
+      document.getElementById("input_search").value +
+      "&filteredBy=search";
+    searchInput.focus();
+  });
 
   // append search form to search container
   searchContainer.appendChild(searchForm);
@@ -65,18 +73,34 @@ function createHeader(section) {
   let loginContainer = document.createElement("div");
   loginContainer.classList.add("header__button");
 
-  // create login input
-  let loginButton = document.createElement("input");
-  loginButton.setAttribute("type", "button");
-  loginButton.setAttribute("value", "Login");
-  loginButton.setAttribute("id", "login_button");
-  loginButton.classList.add("header__button--login");
-  loginButton.onclick = function () {
-    window.location.href = "../screens/logIn.html";
-  };
+  if (localStorage.getItem("isLogged") === "false") {
+    // create login input
+    let loginButton = document.createElement("input");
+    loginButton.setAttribute("type", "button");
+    loginButton.setAttribute("value", "Login");
+    loginButton.setAttribute("id", "login_button");
+    loginButton.classList.add("header__button--login");
+    loginButton.onclick = function () {
+      window.location.href = "../screens/logIn.html";
+    };
 
-  // append login button to login container
-  loginContainer.appendChild(loginButton);
+    // append login button to login container
+    loginContainer.appendChild(loginButton);
+  } else {
+    // create logout input
+    let logoutButton = document.createElement("input");
+    logoutButton.setAttribute("type", "button");
+    logoutButton.setAttribute("value", "Logout");
+    logoutButton.setAttribute("id", "logout_button");
+    logoutButton.classList.add("header__button--login");
+    logoutButton.onclick = function () {
+      localStorage.setItem("isLogged", false);
+      window.location.href = "../screens/home.html";
+    };
+
+    // append logout button to login container
+    loginContainer.appendChild(logoutButton);
+  }
 
   // create search container for mobile
   let searchContainerMobile = document.createElement("div");
@@ -120,7 +144,7 @@ function createHeader(section) {
     },
     {
       name: "Productos",
-      link: "../screens/allProducts.html?category=all",
+      link: "../screens/allProducts.html?category=all&filteredBy=category",
     },
     {
       name: "Contacto",
